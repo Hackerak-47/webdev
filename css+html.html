@@ -1,94 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Aastha Khandelwal - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #f9f9f9;
-      font-family: Arial;
-      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e8f0ff, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #2d2d2d;
     }
 
     .container {
-      width: 80%;
-      margin: auto;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
     }
 
     h1 {
       text-align: center;
-      color: #4b0082;
+      color: #3f0071;
+      font-size: 2.8em;
+      margin-bottom: 10px;
     }
 
     .profile-img {
       display: block;
       margin: 20px auto;
-      width: 150px;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
       border-radius: 50%;
+      border: 4px solid #3f0071;
     }
 
     .section {
-      margin: 30px 0;
+      margin: 40px 0;
     }
 
-    table, th, td {
-      border: 1px solid #ccc;
-      border-collapse: collapse;
-      padding: 8px;
+    h2 {
+      color: #3f0071;
+      font-weight: 600;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 6px;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 8px;
     }
 
     table {
       width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f5f5ff;
+      color: #3f0071;
+      text-align: left;
+    }
+
+    .linkedin {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .linkedin a {
+      color: #0e76a8;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    .linkedin a:hover {
+      color: #06486c;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1><b><mark>Aastha Khandelwal</b></mark></h1>
-    <img class="profile-img" src="F:\one drive new\OneDrive\Documents\aastha\istockphoto-1353379172-170667a.jpg" alt="Profile">
+    <h1>Aastha Khandelwal</h1>
+    <img class="profile-img" src="F:\one drive new\OneDrive\Documents\aastha\istockphoto-1353379172-170667a.jpg" alt="Profile Photo">
 
     <div class="section">
       <h2>About Me</h2>
-      <p>I am aastha an IT student i love to explore things .</p>
+      <p>Hi! I'm Aastha, an enthusiastic IT student with a passion for exploring new tech and ideas. I believe in the power of curiosity, creativity, and continuous learning.</p>
     </div>
 
     <div class="section">
       <h2>Hobbies</h2>
       <ol>
-        <li>drawing</li>
-        <li>sleeping</li>
-        <li>dancing</li>
+        <li>Sketching life </li>
+        <li>Power napping </li>
+        <li>Freestyle dancing</li>
+        <li>Bathroom Singer</li>
       </ol>
     </div>
 
     <div class="section">
       <h2>Projects</h2>
       <ol>
-        <li>dav data cleaning</li>
-        <li>portfolio</li>
-        <li>HTML Page</li>
+        <li>DAV Data Cleaning</li>
+        <li>Personal Portfolio</li>
+        <li>Static HTML Page</li>
       </ol>
     </div>
 
     <div class="section">
-      <h2><b>Skills I Wish to Learn</b></h2>
+      <h2>Skills I Wish to Learn</h2>
       <table>
         <tr>
           <th>Skill</th>
-          <th>Why</th>
+          <th>Reason</th>
         </tr>
         <tr>
           <td>JavaScript</td>
-          <td>because i have to do web dev</td>
+          <td>To bring my web ideas to life.</td>
         </tr>
         <tr>
           <td>Linux</td>
-          <td>because i needed it somewhere or other</td>
+          <td>Because every coder’s journey should include the terminal</td>
         </tr>
         <tr>
-          <td>communication skill</td>
-          <td>to gain confidence </td>
+          <td>Communication Skills</td>
+          <td>To present confidently and maybe even pitch a startup one day</td>
         </tr>
       </table>
+    </div>
+
+    <div class="linkedin">
+      <p>Let's connect on <a href="https://www.linkedin.com/in/aastha-khandelwal-238290313/" target="_blank">LinkedIn</a></p>
     </div>
   </div>
 </body>
