@@ -1,31 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #f0f8ff;
-      font-family: 'Segoe UI';
-      margin: 20px;
+      background: linear-gradient(to right, #e6f2ff, #ffffff);
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
     }
 
     h1 {
-      color: blue;
+      color: #0066cc;
       text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #d0e6ff;
+      padding-bottom: 6px;
+      margin-top: 30px;
     }
 
     p {
-      font-size: 18px;
-      color: #333;
-      padding: 10px;
-      border: 1px solid #ccc;
-      width: 60%;
-      margin: 20px auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+
+    .quote {
+      font-style: italic;
+      background-color: #f0f8ff;
+      border-left: 5px solid #007acc;
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome</h1>
-  <p>This is first time i try css i really dont know  how its gonna look.Lets hope for the best </p>
+  <div class="container">
+    <h1>WELCOME</h1>
+
+    <p>This is my very first attempt at writing CSS. Honestly, I wasn’t sure what to expect ,just some colors and spacing but the more I experiment, the more I realize how powerful and creative CSS can be.</p>
+
+    <div class="quote">
+      "You don’t have to be great to start, but you have to start to be great." – Zig Ziglar
+    </div>
+
+    <h2>About Me</h2>
+    <p>I'm Aastha, a curious and driven IT student. I enjoy learning by doing, and this page is a perfect example. It's not perfect, but it's mine and I’m proud of every step forward.</p>
+
+    <h2>What I've Learned</h2>
+    <p>So far, I've learned to:</p>
+    <ul>
+      <li>Set background colors and fonts</li>
+      <li>Center text and style headers</li>
+      <li>Create visually appealing layout sections</li>
+      <li>Add shadows and rounded corners for a clean, modern look</li>
+    </ul>
+
+    <h2>Fun Fact</h2>
+    <p>When I first saw my CSS file change the entire page’s vibe, I felt like a digital artist! </p>
+
+    <footer>
+      Built with curiosity and creativity 
+    </footer>
+  </div>
 </body>
 </html>
