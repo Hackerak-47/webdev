@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess my number</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #222;
+      color: #0b0a0a8a;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Lucida Sans', sans-serif;
+      color: rgba(236, 46, 13, 0.956);
+      background-image: linear-gradient(to left, #BD5780, #94BBE9);
+      padding: 30px;
+      text-align: center;
+      border-radius: 30px;
+      text-shadow: rgba(255, 157, 0, 0.977);
+      box-shadow: rgb(245, 9, 9);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    h1:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    .input-box, .b {
+      width: 100%;
+      padding: 30px;
+      font-size: 24px;
+      border-radius: 30px;
+      background-image: linear-gradient(to left, #BD5780, #94BBE9);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      color: bisque;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .guess-input {
+      font-size: 24px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      width: 60%;
+    }
+
+    .check-btn {
+      font-size: 20px;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: #5a189a;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .check-btn:hover {
+      background-color: #7b2cbf;
+      transform: scale(1.05);
+    }
+
+    .p {
+      width: fit-content;
+      margin: 40px auto;
+      padding: 40px;
+      display: flex;
+      border-radius: 30px;
+      background-image: linear-gradient(to left, #BD5780, #94BBE9);
+      font-size: 35px;
+      color: rgb(244, 12, 12);
+      text-align: center;
+    }
+
+    .again-btn {
+      font-size: 30px;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: #5a189a;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .again-btn:hover {
+      background-color: #7b2cbf;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Guess the number</h1><br><br>
+
+  <div class="grid-container">
+    <div class="input-box">
+      <label>Enter a number:</label>
+      <input type="number" class="guess-input" />
+      <button class="check-btn">Check!</button>
+    </div>
+
+    <div class="b">
+      <p class="message">Start guessing...</p>
+      <p class="label-score">💯 Score: <span class="score">20</span></p>
+      <p class="label-highscore">🥇 Highscore: <span class="highscore">0</span></p>
+      <button class="again-btn">Again!</button>
+    </div>
+  </div>
+
+  <div class="p">
+    <b><p>Try your luck and guess a number between 1 to 20</p></b>
+  </div>
+
+  <script>
+    'use strict';
+
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let score = 20;
+let highscore = 0;
+
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
+
+document.querySelector('.check-btn').addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess-input').value);
+  console.log(guess, typeof guess);
+  console.log(secretNumber);
+
+  if (!guess) {
+    displayMessage('⛔️ No number!');
+  } else if (guess === secretNumber) {
+    displayMessage('🎉 Correct Number!');
+    document.querySelector('body').style.backgroundColor = '#60b347';
+
+    // Optional: show secret number somewhere if you have a box
+    // document.querySelector('.number').textContent = secretNumber;
+
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
+  } else if (guess !== secretNumber) {
+    if (score > 1) {
+      displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      displayMessage('💥 You lost the game!');
+      document.querySelector('.score').textContent = 0;
+    }
+  }
+});
+
+document.querySelector('.again-btn').addEventListener('click', function () {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+
+  displayMessage('Start guessing...');
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.guess-input').value = '';
+  document.querySelector('body').style.backgroundColor = '#222';
+});
+
+    
+  </script>
+</body>
+</html>
